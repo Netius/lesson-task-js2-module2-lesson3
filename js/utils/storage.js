@@ -3,6 +3,7 @@ export function saveTodoStorage(key , value , isComplete){
 }
 
 export function renderTodoStorage(key){
+    console.log("KEY " + key)
     const value = localStorage.getItem(key);
     
     if(!value){

@@ -1,9 +1,22 @@
 export default function removeFromStorage(event){
-    console.log(event.target.dataset.id);
-    const todoId = event.target.dataset.id;
-    localStorage.removeItem("id");
-    
 
+    let storeArray = JSON.parse(localStorage.getItem("todo"));
+
+    console.log(storeArray)
+    const todoId = event.target.dataset.id;
+
+    for(let element in storeArray) {
+      console.log(element.id)
+    }
+
+    // for(let i = 0; i <= storeArray.length; i++){
+    //   console.log(storeArray.id)
+    //   if(storeArray.id === todoId){
+    //     storeArray.splice(i ,1);
+    //     localStorage.setItem("todo", JSON.stringify(storeArray));  
+    //   }
+    // }
+    
 }
 
 
